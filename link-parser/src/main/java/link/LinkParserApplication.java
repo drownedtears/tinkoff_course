@@ -1,5 +1,13 @@
 package link;
 
-public class LinkParserApplication {
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
+@SpringBootApplication
+@EnableScheduling
+public class LinkParserApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(LinkParserApplication.class, args);
+    }
 }

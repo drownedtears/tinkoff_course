@@ -11,6 +11,5 @@ import java.time.Duration;
 @Validated
 @ConfigurationProperties(prefix = "app", ignoreUnknownFields = false)
 public record ApplicationConfig(@NotNull String test, @Bean Scheduler scheduler) {
-
     public record Scheduler(Duration interval) { }
 }

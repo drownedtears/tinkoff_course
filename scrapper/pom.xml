@@ -19,6 +19,8 @@
         <srpingdoc-openapi-starter.version>2.0.2</srpingdoc-openapi-starter.version>
         <slf4j.version>2.0.5</slf4j.version>
         <starter-webflux.version>3.0.2</starter-webflux.version>
+        <failsafe.version>2.19.1</failsafe.version>
+        <spring-test.version>3.0.5</spring-test.version>
     </properties>
 
     <dependencies>
@@ -62,6 +64,12 @@
             <optional>true</optional>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-test.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
@@ -84,6 +92,12 @@
             <artifactId>link-parser</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <version>${failsafe.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -121,6 +135,10 @@
                     <release>17</release>
                     <parameters>true</parameters>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
