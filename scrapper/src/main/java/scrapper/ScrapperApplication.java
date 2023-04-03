@@ -1,5 +1,6 @@
 package scrapper;
 
+
 import scrapper.configuration.ApplicationConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
