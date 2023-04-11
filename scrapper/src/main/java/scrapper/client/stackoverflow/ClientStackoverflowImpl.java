@@ -18,7 +18,7 @@ public non-sealed class ClientStackoverflowImpl implements ClientStackoverflow {
     public StackoverflowDtoResponse fetchInfo(StackoverflowLinkDto stackoverflowLinkDto) {
         String uri = Objects.isNull(baseUrl) ?
                 String.format("https://api.stackexchange.com/questions/%s?site=stackoverflow",
-                        stackoverflowLinkDto.id()) :
+                        stackoverflowLinkDto.answerId()) :
                 baseUrl;
 
         return WebClient.create().get()
